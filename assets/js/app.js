@@ -625,8 +625,20 @@ var table = {
 };
 
 
-var li = "<li class='{0}'><span class='symbol'>{1}</span><span class='name'>{2}</span> <span class='f'>#</span> {3}</li>";
 
+// ============
+// VARIABLES
+// ============
+
+var tpl,
+	li = "<li class='{0}'><span class='symbol'>{1}</span><span class='name'>{2}</span> <span class='f'>#</span> {3}</li>",
+	el;
+
+
+
+// ============
+// HELPERS
+// ============
 
 String.prototype.format = function(){
 	var string = this;
@@ -643,15 +655,19 @@ function upperCase(str){
 }
 
 
+// ============
+// INTERFACE
+// ============
 
 function display(){
 	tpl = "";
 	for (var prop in table) {
-		var el = table[prop];
+		el = table[prop];
 		tpl += li.format(el.c, el.s, upperCase(prop), el.n);
 	}
 	$('ul').html(tpl);
 }
+
 
 // ===================
 // RUN YOU CLEVER BOY
