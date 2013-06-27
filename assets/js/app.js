@@ -50,7 +50,8 @@ var table = {
 	fluorine: {
 		n: 9,
 		s: 'F',
-		w: 18.9984032
+		w: 18.9984032,
+		c: 'ha'
 	},
 	neon: {
 		n: 10,
@@ -96,7 +97,8 @@ var table = {
 	chlorine: {
 		n: 17,
 		s: 'Cl',
-		w: 35.453
+		w: 35.453,
+		c: 'ha'
 	},
 	argon: {
 		n: 18,
@@ -119,52 +121,62 @@ var table = {
 	scandium: {
 		n: 21,
 		s: 'Sc',
-		w: 44.955912
+		w: 44.955912,
+		c: 'tm'
 	},
 	titanium: {
 		n: 22,
 		s: 'Ti',
-		w: 47.867
+		w: 47.867,
+		c: 'tm'
 	},
 	vanadium: {
 		n: 23,
 		s: 'V',
-		w: 50.9415
+		w: 50.9415,
+		c: 'tm'
 	},
 	chromium: {
 		n: 24,
 		s: 'Cr',
-		w: 51.9961
+		w: 51.9961,
+		c: 'tm'
 	},
 	manganese: {
 		n: 25,
 		s: 'Mn',
-		w: 54.938045
+		w: 54.938045,
+		c: 'tm'
 	},
 	iron: {
 		n: 26,
 		s: 'Fe',
-		w: 55.845
+		w: 55.845,
+		c: 'tm'
 	},
 	cobalt: {
 		n: 27,
 		s: 'Co',
-		w: 58.933195
+		w: 58.933195,
+		c: 'tm'
 	},
 	nickel: {
 		n: 28,
 		s: 'Ni',
-		w: 58.6934
+		w: 58.6934,
+		c: 'tm'
 	},
 	copper: {
 		n: 29,
 		s: 'Cu',
-		w: 63.546
+		w: 63.546,
+		c: 'tm'
 	},
 	zinc: {
 		n: 30,
 		s: 'Zn',
-		w: 65.38
+		w: 65.38,
+		c: 'tm'
 	},
 	gallium: {
 		n: 31,
@@ -192,7 +204,8 @@ var table = {
 	bromine: {
 		n: 35,
 		s: 'Br',
-		w: 79.904
+		w: 79.904,
+		c: 'ha'
 	},
 	krypton: {
 		n: 36,
@@ -215,52 +228,62 @@ var table = {
 	yttrium: {
 		n: 39,
 		s: 'Y',
-		w: 88.90585
+		w: 88.90585,
+		c: 'tm'
 	},
 	zirconium: {
 		n: 40,
 		s: 'Zr',
-		w: 91.224
+		w: 91.224,
+		c: 'tm'
 	},
 	niobium: {
 		n: 41,
 		s: 'Nb',
-		w: 92.90638
+		w: 92.90638,
+		c: 'tm'
 	},
 	molybdenum: {
 		n: 42,
 		s: 'Mo',
-		w: 95.96
+		w: 95.96,
+		c: 'tm'
 	},
 	technetium: {
 		n: 43,
 		s: 'Tc',
-		w: (98)
+		w: (98),
+		c: 'tm'
 	},
 	ruthenium: {
 		n: 44,
 		s: 'Ru',
-		w: 101.07
+		w: 101.07,
+		c: 'tm'
 	},
 	rhodium: {
 		n: 45,
 		s: 'Rh',
-		w: 102.9055
+		w: 102.9055,
+		c: 'tm'
 	},
 	palladium: {
 		n: 46,
 		s: 'Pd',
-		w: 106.42
+		w: 106.42,
+		c: 'tm'
 	},
 	silver: {
 		n: 47,
 		s: 'Ag',
-		w: 107.8682
+		w: 107.8682,
+		c: 'tm'
 	},
 	cadmium: {
 		n: 48,
 		s: 'Cd',
-		w: 112.411
+		w: 112.411,
+		c: 'tm'
 	},
 	indium: {
 		n: 49,
@@ -287,7 +310,8 @@ var table = {
 	iodine: {
 		n: 53,
 		s: 'I',
-		w: 126.90447
+		w: 126.90447,
+		c: 'ha'
 	},
 	xenon: {
 		n: 54,
@@ -310,122 +334,146 @@ var table = {
 	lanthanum: {
 		n: 57,
 		s: 'La',
-		w: 138.90547
+		w: 138.90547,
+		c: 'la'
 	},
 	cerium: {
 		n: 58,
 		s: 'Ce',
-		w: 140.116
+		w: 140.116,
+		c: 'la'
 	},
 	praseodymium: {
 		n: 59,
 		s: 'Pr',
-		w: 140.90765
+		w: 140.90765,
+		c: 'la'
 	},
 	neodymium: {
 		n: 60,
 		s: 'Nd',
-		w: 144.242
+		w: 144.242,
+		c: 'la'
 	},
 	promethium: {
 		n: 61,
 		s: 'Pm',
-		w: (145)
+		w: (145),
+		c: 'la'
 	},
 	samarium: {
 		n: 62,
 		s: 'Sm',
-		w: 150.36
+		w: 150.36,
+		c: 'la'
 	},
 	europium: {
 		n: 63,
 		s: 'Eu',
-		w: 151.964
+		w: 151.964,
+		c: 'la'
 	},
 	gadolinium: {
 		n: 64,
 		s: 'Gd',
-		w: 157.25
+		w: 157.25,
+		c: 'la'
 	},
 	terbium: {
 		n: 65,
 		s: 'Tb',
-		w: 158.92535
+		w: 158.92535,
+		c: 'la'
 	},
 	dysprosium: {
 		n: 66,
 		s: 'Dy',
-		w: 162.5
+		w: 162.5,
+		c: 'la'
 	},
 	holmium: {
 		n: 67,
 		s: 'Ho',
-		w: 164.93032
+		w: 164.93032,
+		c: 'la'
 	},
 	erbium: {
 		n: 68,
 		s: 'Er',
-		w: 167.259
+		w: 167.259,
+		c: 'la'
 	},
 	thulium: {
 		n: 69,
 		s: 'Tm',
-		w: 168.93421
+		w: 168.93421,
+		c: 'la'
 	},
 	ytterbium: {
 		n: 70,
 		s: 'Yb',
-		w: 173.054
+		w: 173.054,
+		c: 'la'
 	},
 	lutetium: {
 		n: 71,
 		s: 'Lu',
-		w: 174.9668
+		w: 174.9668,
+		c: 'la'
 	},
 	hafnium: {
 		n: 72,
 		s: 'Hf',
-		w: 178.49
+		w: 178.49,
+		c: 'tm'
 	},
 	tantalum: {
 		n: 73,
 		s: 'Ta',
-		w: 180.94788
+		w: 180.94788,
+		c: 'tm'
 	},
 	tungsten: {
 		n: 74,
 		s: 'W',
-		w: 183.84
+		w: 183.84,
+		c: 'tm'
 	},
 	rhenium: {
 		n: 75,
 		s: 'Re',
-		w: 186.207
+		w: 186.207,
+		c: 'tm'
 	},
 	osmium: {
 		n: 76,
 		s: 'Os',
-		w: 190.23
+		w: 190.23,
+		c: 'tm'
 	},
 	iridium: {
 		n: 77,
 		s: 'Ir',
-		w: 192.217
+		w: 192.217,
+		c: 'tm'
 	},
 	platinum: {
 		n: 78,
 		s: 'Pt',
-		w: 195.084
+		w: 195.084,
+		c: 'tm'
 	},
 	gold: {
 		n: 79,
 		s: 'Au',
-		w: 196.966569
+		w: 196.966569,
+		c: 'tm'
 	},
 	mercury: {
 		n: 80,
 		s: 'Hg',
-		w: 200.59
+		w: 200.59,
+		c: 'tm'
 	},
 	thallium: {
 		n: 81,
@@ -451,7 +499,8 @@ var table = {
 	astatine: {
 		n: 85,
 		s: 'At',
-		w: (210)
+		w: (210),
+		c: 'ha'
 	},
 	radon: {
 		n: 86,
@@ -549,47 +598,56 @@ var table = {
 	rutherfordium: {
 		n: 104,
 		s: 'Rf',
-		w: (267)
+		w: (267),
+		c: 'tm'
 	},
 	dubnium: {
 		n: 105,
 		s: 'Db',
-		w: (268)
+		w: (268),
+		c: 'tm'
 	},
 	seaborgium: {
 		n: 106,
 		s: 'Sg',
-		w: (271)
+		w: (271),
+		c: 'tm'
 	},
 	bohrium: {
 		n: 107,
 		s: 'Bh',
-		w: (272)
+		w: (272),
+		c: 'tm'
 	},
 	hassium: {
 		n: 108,
 		s: 'Hs',
-		w: (270)
+		w: (270),
+		c: 'tm'
 	},
 	meitnerium: {
 		n: 109,
 		s: 'Mt',
-		w: (276)
+		w: (276),
+		c: 'tm'
 	},
 	darmstadtium: {
 		n: 110,
 		s: 'Ds',
-		w: (281)
+		w: (281),
+		c: 'tm'
 	},
 	roentgenium: {
 		n: 111,
 		s: 'Rg',
-		w: (280)
+		w: (280),
+		c: 'tm'
 	},
 	copernicium: {
 		n: 112,
 		s: 'Cn',
-		w: (285)
+		w: (285),
+		c: 'tm'
 	},
 	ununtrium: {
 		n: 113,
@@ -614,7 +672,8 @@ var table = {
 	ununseptium: {
 		n: 117,
 		s: 'Uus',
-		w: (294)
+		w: (294),
+		c: 'ha'
 	},
 	ununoctium: {
 		n: 118,
@@ -631,7 +690,7 @@ var table = {
 // ============
 
 var tpl,
-	li = "<li class='{0}'><span class='symbol'>{1}</span><span class='name'>{2}</span> <span class='f'>#</span> {3}</li>",
+	li = "<li class='{0}'><span class='symbol'>{1}</span><span class='name'>{2}</span><span class='segment'><span class='f'>#</span> {3}</span> <span class='segment'><span class='f'>w</span> {4}</span></li>",
 	el;
 
 
@@ -663,7 +722,7 @@ function display(){
 	tpl = "";
 	for (var prop in table) {
 		el = table[prop];
-		tpl += li.format(el.c, el.s, upperCase(prop), el.n);
+		tpl += li.format(el.c, el.s, upperCase(prop), el.n, el.w);
 	}
 	$('ul').html(tpl);
 }
