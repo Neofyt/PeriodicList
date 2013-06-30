@@ -82,7 +82,7 @@ body {
 h1 {
 	font-size: 30px;
 	line-height: 40px;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 }
 
 
@@ -94,7 +94,7 @@ section {
 	padding-top: 50px;
 	position: fixed;
 	margin-bottom: 100px;
-	width: calc(100% - 260px);
+	width: calc(100% - 310px);
 	z-index: 2;
 }
 
@@ -130,8 +130,8 @@ article {
 	/*padding-top: 50px;*/
 }
 
-ul {
-	padding-top: 200px;
+#plist {
+	padding-top: 160px;
 	margin-bottom: 100px;
 	z-index: 1;
 }
@@ -181,4 +181,16 @@ li {
 .me .symbol { background: rgba(68, 82, 27, 0.8) } /*#44521b */
 .ha .symbol { background: rgba(115, 152, 209, 0.8) } /*#7398d1 */
 .tm .symbol { background: rgba(175, 124, 38, 0.8) } /*#af7c26 */
-.la .symbol { background: rgba(89, 29, 46, 0.8) } /*#591d2e */
+.la .symbol { background: rgba(61, 34, 6, 0.8) } /*#3d2206 */
+.ptm .symbol { background: rgba(127, 47, 2, 0.8) } /*#7f2f02 */
+.ac .symbol { background: rgba(217, 177, 106, 0.8) } /*#d4b16a */
+
+.legend .symbol {
+	color: #666;
+}
+
+.legend:hover {
+	background: transparent;
+}
+
+

@@ -74,7 +74,8 @@ var table = {
 	aluminium: {
 		n: 13,
 		s: 'Al',
-		w: 26.9815386
+		w: 26.9815386,
+		c: 'ptm'
 	},
 	silicon: {
 		n: 14,
@@ -181,7 +182,8 @@ var table = {
 	gallium: {
 		n: 31,
 		s: 'Ga',
-		w: 69.723
+		w: 69.723,
+		c: 'ptm'
 	},
 	germanium: {
 		n: 32,
@@ -288,12 +290,14 @@ var table = {
 	indium: {
 		n: 49,
 		s: 'In',
-		w: 114.818
+		w: 114.818,
+		c: 'ptm'
 	},
 	tin: {
 		n: 50,
 		s: 'Sn',
-		w: 118.71
+		w: 118.71,
+		c: 'ptm'
 	},
 	antimony: {
 		n: 51,
@@ -478,139 +482,157 @@ var table = {
 	thallium: {
 		n: 81,
 		s: 'Tl',
-		w: 204.3833
+		w: 204.3833,
+		c: 'ptm'
 	},
 	lead: {
 		n: 82,
 		s: 'Pb',
-		w: 207.2
+		w: 207.2,
+		c: 'ptm'
 	},
 	bismuth: {
 		n: 83,
 		s: 'Bi',
-		w: 208.9804
+		w: 208.9804,
+		c: 'ptm'
 	},
 	polonium: {
 		n: 84,
 		s: 'Po',
-		w: (209),
+		w: '(209)',
 		c: 'me'
 	},
 	astatine: {
 		n: 85,
 		s: 'At',
-		w: (210),
+		w: '(210)',
 		c: 'ha'
 	},
 	radon: {
 		n: 86,
 		s: 'Rn',
-		w: (222),
+		w: '(222)',
 		c: 'ng'
 	},
 	francium: {
 		n: 87,
 		s: 'Fr',
-		w: (223),
+		w: '(223)',
 		c: 'am'
 	},
 	radium: {
 		n: 88,
 		s: 'Ra',
-		w: (226),
+		w: '(226)',
 		c: 'aem'
 	},
 	actinium: {
 		n: 89,
 		s: 'Ac',
-		w: (227)
+		w: '(227)',
+		c: 'ac'
 	},
 	thorium: {
 		n: 90,
 		s: 'Th',
-		w: 232.03806
+		w: 232.03806,
+		c: 'ac'
 	},
 	protactinium: {
 		n: 91,
 		s: 'Pa',
-		w: 231.03588
+		w: 231.03588,
+		c: 'ac'
 	},
 	uranium: {
 		n: 92,
 		s: 'U',
-		w: 238.02891
+		w: 238.02891,
+		c: 'ac'
 	},
 	neptunium: {
 		n: 93,
 		s: 'Np',
-		w: (237)
+		w: '(237)',
+		c: 'ac'
 	},
 	plutonium: {
 		n: 94,
 		s: 'Pu',
-		w: (244)
+		w: '(244)',
+		c: 'ac'
 	},
 	americium: {
 		n: 95,
 		s: 'Am',
-		w: (243)
+		w: '(243)',
+		c: 'ac'
 	},
 	curium: {
 		n: 96,
 		s: 'Cm',
-		w: (247)
+		w: '(247)',
+		c: 'ac'
 	},
 	berkelium: {
 		n: 97,
 		s: 'Bk',
-		w: (247)
+		w: '(247)',
+		c: 'ac'
 	},
 	californium: {
 		n: 98,
 		s: 'Cf',
-		w: (251)
+		w: '(251)',
+		c: 'ac'
 	},
 	einsteinium: {
 		n: 99,
 		s: 'Es',
-		w: (252)
+		w: '(252)',
+		c: 'ac'
 	},
 	fermium: {
 		n: 100,
 		s: 'Fm',
-		w: (257)
+		w: '(257)',
+		c: 'ac'
 	},
 	mendelevium: {
 		n: 101,
 		s: 'Md',
-		w: (258)
+		w: '(258)',
+		c: 'ac'
 	},
 	nobelium: {
 		n: 102,
 		s: 'No',
-		w: (259)
+		w: '(259)',
+		c: 'ac'
 	},
 	lawrencium: {
 		n: 103,
 		s: 'Lr',
-		w: (262)
+		w: '(262)',
+		c: 'ac'
 	},
 	rutherfordium: {
 		n: 104,
 		s: 'Rf',
-		w: (267),
+		w: '(267)',
 		c: 'tm'
 	},
 	dubnium: {
 		n: 105,
 		s: 'Db',
-		w: (268),
+		w: '(268)',
 		c: 'tm'
 	},
 	seaborgium: {
 		n: 106,
 		s: 'Sg',
-		w: (271),
+		w: '(271)',
 		c: 'tm'
 	},
 	bohrium: {
@@ -622,63 +644,67 @@ var table = {
 	hassium: {
 		n: 108,
 		s: 'Hs',
-		w: (270),
+		w: '(270)',
 		c: 'tm'
 	},
 	meitnerium: {
 		n: 109,
 		s: 'Mt',
-		w: (276),
+		w: '(276)',
 		c: 'tm'
 	},
 	darmstadtium: {
 		n: 110,
 		s: 'Ds',
-		w: (281),
+		w: '(281)',
 		c: 'tm'
 	},
 	roentgenium: {
 		n: 111,
 		s: 'Rg',
-		w: (280),
+		w: '(280)',
 		c: 'tm'
 	},
 	copernicium: {
 		n: 112,
 		s: 'Cn',
-		w: (285),
+		w: '(285)',
 		c: 'tm'
 	},
 	ununtrium: {
 		n: 113,
 		s: 'Uut',
-		w: (284)
+		w: '(284)',
+		c: 'ptm'
 	},
 	flerovium: {
 		n: 114,
 		s: 'Fl',
-		w: (289)
+		w: '(289)',
+		c: 'ptm'
 	},
 	ununpentium: {
 		n: 115,
 		s: 'Uup',
-		w: (288)
+		w: '(288)',
+		c: 'ptm'
 	},
 	livermorium: {
 		n: 116,
 		s: 'Lv',
-		w: (293)
+		w: '(293)',
+		c: 'ptm'
 	},
 	ununseptium: {
 		n: 117,
 		s: 'Uus',
-		w: (294),
+		w: '(294)',
 		c: 'ha'
 	},
 	ununoctium: {
 		n: 118,
 		s: 'Uuo',
-		w: (294),
+		w: '(294)',
 		c: 'ng'
 	}
 };
@@ -724,7 +750,7 @@ function display(){
 		el = table[prop];
 		tpl += li.format(el.c, el.s, upperCase(prop), el.n, el.w);
 	}
-	$('ul').html(tpl);
+	$('#pList').html(tpl);
 }
 
 
