@@ -735,9 +735,9 @@ String.prototype.format = function(){
 	return string;
 };
 
-function upperCase(str){
-	return str.charAt(0).toUpperCase() + str.substring(1);
-}
+String.prototype.upperCase = function(){
+	return this.charAt(0).toUpperCase() + this.substring(1);
+};
 
 
 // ============
@@ -748,9 +748,9 @@ function display(){
 	tpl = "";
 	for (var prop in table) {
 		el = table[prop];
-		tpl += li.format(el.c, el.s, upperCase(prop), el.n, el.w);
+		tpl += li.format(el.c, el.s, prop.upperCase(), el.n, el.w);
 	}
-	$('#pList').html(tpl);
+	pList.innerHTML = tpl;
 }
 
 
