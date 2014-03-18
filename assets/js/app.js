@@ -760,10 +760,10 @@ function filter(w,r){
 		selected = false;
 		switch(w){
 			case "s":
-				if(el.s.toLowerCase().indexOf(r) > -1){ selected = true; }
+				if(el.s.toLowerCase().indexOf(r.toLowerCase()) > -1){ selected = true; }
 				break;
 			case "p":
-				if(prop.toLowerCase().indexOf(r) > -1){ selected = true; }
+				if(prop.toLowerCase().indexOf(r.toLowerCase()) > -1){ selected = true; }
 				break;
 			case "n":
 				if(el.n.toString().indexOf(r) > -1){ selected = true; }
