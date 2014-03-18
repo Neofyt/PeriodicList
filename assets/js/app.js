@@ -753,6 +753,34 @@ function display(){
 	pList.innerHTML = tpl;
 }
 
+function filter(w,r){
+	tpl = "";
+	for (var prop in table) {
+		el = table[prop];
+		selected = false;
+		switch(w){
+			case "s":
+				if(el.s.toLowerCase().indexOf(r) > -1){ selected = true; }
+				break;
+			case "p":
+				if(prop.toLowerCase().indexOf(r) > -1){ selected = true; }
+				break;
+			case "n":
+				if(el.n.toString().indexOf(r) > -1){ selected = true; }
+				break;
+			case w:
+				if(el.w.toString().indexOf(r) > -1){ selected = true; }
+				break;
+			default:
+				break;
+		}
+		if(selected || !r){
+			tpl += li.format(el.c, el.s, prop.upperCase(), el.n, el.w);
+		}	
+	}
+	pList.innerHTML = tpl;
+}
+
 
 // ===================
 // RUN YOU CLEVER BOY

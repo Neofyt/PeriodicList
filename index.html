@@ -11,7 +11,7 @@
 		<aside>
 			<h1>The Periodic list</h1>
 			<ul>
-				<li class="l-ac">Actinoids <input type="checkbox"></input></li>
+				<li class="l-ac">Actinoids <!--<input type="checkbox">--></input></li>
 				<li class="l-am">Alkali metals</li>
 				<li class="l-aem">Alkaline earth metals</li>
 				<li class="l-ha">Halogens</li>
@@ -30,8 +30,15 @@
 
 				<h1>All elements</h1>
 
+				<!--<input type="text" onkeyup="filter('c', this.value);" />-->
+
 				<ul>
-					<li class="legend"><span class='symbol'>S</span><span class='name'>Name</span><span class='segment'>Number</span> <span class='segment'>Weight</span></li>
+					<li class="legend">
+						<input class='symbol' placeholder="?" onkeyup="filter('s', this.value);" />
+						<input class='name' placeholder="Name" onkeyup="filter('p', this.value);" />
+						<input class='segment' placeholder="Number" onkeyup="filter('n', this.value);" />
+						<input class='segment' placeholder="Weight" onkeyup="filter('w', this.value);" />
+					</li>
 				</ul>
 
 			</section>
