@@ -786,6 +786,4 @@ function filter(what,r){
 // RUN YOU CLEVER BOY
 // ===================
 
-$(document).ready(function(){
-	filter();
-});
+filter();
