@@ -1,23 +1,23 @@
 var table = {
-	hydrogen: {
+	Hydrogen: {
 		n: 1,
 		s: 'H',
 		w: 1.00794,
 		c: 'onm'
 	},
-	helium: {
+	Helium: {
 		n: 2,
 		s: 'He',
 		w: 4.002602,
 		c: 'ng'
 	},
-	lithium: {
+	Lithium: {
 		n: 3,
 		s: 'Li',
 		w: 6.941,
 		c: 'am'
 	},
-	beryllium: {
+	Beryllium: {
 		n: 4,
 		s: 'Be',
 		w: 9.012182,
@@ -739,6 +739,10 @@ String.prototype.upperCase = function(){
 	return this.charAt(0).toUpperCase() + this.substring(1);
 };
 
+String.prototype.rexp = function(reg){
+	return this.toString().replace(reg,"<span class='highlight'>$&</span>");
+};
+
 
 // ============
 // INTERFACE
@@ -753,28 +757,42 @@ function display(){
 	pList.innerHTML = tpl;
 }
 
-function filter(w,r){
+function filter(what,r){
 	tpl = "";
 	for (var prop in table) {
 		el = table[prop];
-		selected = false;
-		switch(w){
-			case "s":
-				if(el.s.toLowerCase().indexOf(r.toLowerCase()) > -1){ selected = true; }
-				break;
-			case "p":
-				if(prop.toLowerCase().indexOf(r.toLowerCase()) > -1){ selected = true; }
-				break;
-			case "n":
-				if(el.n.toString().indexOf(r) > -1){ selected = true; }
-				break;
-			case w:
-				if(el.w.toString().indexOf(r) > -1){ selected = true; }
-				break;
-			default:
-				break;
-		}
-		if(selected || !r){
+		if(r != ""){
+			var reg = new RegExp(r, "g");
+			switch(what){
+				case "s":
+					if(el.s.toLowerCase().indexOf(r.toLowerCase()) > -1){ 
+						tpl += li.format(el.c, el.s, prop.upperCase(), el.n, el.w); 
+					}
+					break;
+				case "p":
+					if(prop.toLowerCase().indexOf(r.toLowerCase()) > -1){
+						//res = el.n.toString().replace(reg,"<span class='highlight'>$&</span>");
+						//tpl += li.format(el.c, el.s, prop.upperCase(), res, el.w);
+						tpl += li.format(el.c, el.s, prop.toString().rexp(reg), el.n, el.w);
+					}
+					break;
+				case "n":
+					if(el.n.toString().indexOf(r) > -1){
+						//res = el.n.toString().replace(reg,"<span class='highlight'>$&</span>");
+						tpl += li.format(el.c, el.s, prop.upperCase(), el.n.toString().rexp(reg), el.w);
+					}
+					break;
+				case "w":
+					if(el.w.toString().indexOf(r) > -1){ 
+						//res = el.w.toString().replace(reg,"<span class='highlight'>$&</span>");
+						//res = el.w.rep(reg);
+						tpl += li.format(el.c, el.s, prop.upperCase(), el.n, el.w.toString().rexp(reg));
+					}
+					break;
+				default:
+					break;
+			}
+		} else if(!r){
 			tpl += li.format(el.c, el.s, prop.upperCase(), el.n, el.w);
 		}	
 	}
