@@ -34,19 +34,6 @@ body {
 ol, ul {
 	list-style: none;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
 :focus {
 	outline :none;
 }
@@ -85,7 +72,10 @@ h1 {
 	margin-bottom: 30px;
 }
 
-
+	h1 span {
+		font-style: italic;
+		font-size: 18px;
+	}
 
 section {
 	background: #fff url("../img/generated.png") 0 0 repeat;
@@ -97,9 +87,7 @@ section {
 	width: calc(100% - 310px);
 	z-index: 2;
 }
-
 	
-
 * {
 	transition: all .3s;
 	-moz-transition: all .3s;
@@ -116,7 +104,7 @@ canvas {
 aside {
 	width: 260px;
 	float: left;
-	color: rgba( 0, 0, 0, 0.65 );
+	color: rgba(0, 0, 0, 0.65);
 	position: fixed;
 	overflow: hidden;
 	padding: 50px 20px;
@@ -127,7 +115,6 @@ aside {
 article {
 	margin-left: 280px;
 	margin-right: 30px;
-	/*padding-top: 50px;*/
 }
 
 #plist {
@@ -213,5 +200,10 @@ li {
 }
 
 .highlight {
-	background: yellow;
+	background-color: rgb(194, 228, 255);
+	color: rgb(22, 135, 226);
+}
+
+input:hover, input:focus {
+	border-bottom: solid 1px rgb(22, 135, 226);
 }
