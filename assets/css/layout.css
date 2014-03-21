@@ -173,8 +173,12 @@ li {
 }
 
 .segment{
-	width: 100px;
+	width: 130px;
 }
+
+	#pList .segment {
+		margin: 0 2px;
+	}
 
 .f {
 	opacity: .3;

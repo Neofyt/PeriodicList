@@ -3,25 +3,29 @@ var table = {
 		n: 1,
 		s: 'H',
 		w: 1.00794,
-		c: 'onm'
+		c: 'onm',
+		e: "1"
 	},
 	Helium: {
 		n: 2,
 		s: 'He',
 		w: 4.002602,
-		c: 'ng'
+		c: 'ng',
+		e: "2"
 	},
 	Lithium: {
 		n: 3,
 		s: 'Li',
 		w: 6.941,
-		c: 'am'
+		c: 'am',
+		e: "2 1"
 	},
 	Beryllium: {
 		n: 4,
 		s: 'Be',
 		w: 9.012182,
-		c: 'aem'
+		c: 'aem',
+		e: [2,2]
 	},
 	Boron: {
 		n: 5,
@@ -716,7 +720,7 @@ var table = {
 // ============
 
 var tpl,
-	li = "<li class='{0}'><span class='symbol'>{1}</span><span class='name'>{2}</span><span class='segment'><span class='f'>#</span> {3}</span> <span class='segment'><span class='f'>w</span> {4}</span></li>",
+	li = "<li class='{0}'><span class='symbol'>{1}</span><span class='name'>{2}</span><span class='segment'><span class='f'>#</span> {3}</span><span class='segment'><span class='f'>w</span> {4}</span><span class='segment'><span class='f'>e</span> {5}</span></li>",
 	el;
 
 
@@ -771,11 +775,16 @@ function filter(what,r){
 						tpl += li.format(el.c, el.s, prop, el.n, el.w.toString().rexp(reg));
 					}
 					break;
+				case "e":
+					if(el.e.toString().indexOf(r) > -1){ 
+						tpl += li.format(el.c, el.s, prop, el.n, el.w, el.e.toString().rexp(reg));
+					}
+					break;
 				default:
 					break;
 			}
 		} else {
-			tpl += li.format(el.c, el.s, prop, el.n, el.w);
+			tpl += li.format(el.c, el.s, prop, el.n, el.w, el.e);
 		}	
 	}
 	pList.innerHTML = tpl;
