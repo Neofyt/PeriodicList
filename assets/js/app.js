@@ -853,7 +853,7 @@ String.prototype.format = function(){
 	return string;
 };
 
-String.prototype.rexp = function(reg){
+String.prototype.high = function(reg){
 	return this.replace(reg, "<span class='highlight'>$&</span>");
 };
 
@@ -876,22 +876,22 @@ function filter(what,r){
 					break;
 				case "p":
 					if(prop.toLowerCase().indexOf(r.toLowerCase()) > -1){
-						tpl += li.format(el.c, el.s, prop.toString().rexp(reg), el.n, el.w, el.e);
+						tpl += li.format(el.c, el.s, prop.toString().high(reg), el.n, el.w, el.e);
 					}
 					break;
 				case "n":
 					if(el.n.toString().indexOf(r) > -1){
-						tpl += li.format(el.c, el.s, prop, el.n.toString().rexp(reg), el.w, el.e);
+						tpl += li.format(el.c, el.s, prop, el.n.toString().high(reg), el.w, el.e);
 					}
 					break;
 				case "w":
 					if(el.w.toString().indexOf(r) > -1){ 
-						tpl += li.format(el.c, el.s, prop, el.n, el.w.toString().rexp(reg), el.e);
+						tpl += li.format(el.c, el.s, prop, el.n, el.w.toString().high(reg), el.e);
 					}
 					break;
 				case "e":
 					if(el.e.toString().indexOf(r) > -1){ 
-						tpl += li.format(el.c, el.s, prop, el.n, el.w, el.e.join(",").rexp(reg));
+						tpl += li.format(el.c, el.s, prop, el.n, el.w, el.e.join(",").high(reg));
 					}
 					break;
 				default:
