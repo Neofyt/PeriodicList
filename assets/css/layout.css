@@ -213,6 +213,6 @@ input {
 	font-weight: 300;
 }
 
-	input:hover, input:focus {
+	input:not(.symbol):hover, input:not(.symbol):focus {
 		border-bottom: solid 1px rgb(22, 135, 226);
 	}
