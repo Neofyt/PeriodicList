@@ -981,60 +981,39 @@ String.prototype.high = function(reg){
 // INTERFACE
 // ============
 
-function filter(what,r,e){
+function display(){
 	tpl = "";
 
-	if(list.length == 0 || (e && e.keyCode == 8)){
-		listing = table;
-	} else {
-		listing = list;
-		list = [];
+	for (var i = 0, length = table.length; i < length; i++) {
+		el = table[i];
+		tpl += li.format(el.c, el.s, el.p, el.n, el.w, el.e);
 	}
 
-	for (var i = 0, length = listing.length; i < length; i++) {
+	pList.innerHTML = tpl;
+}
 
-	el = listing[i];
+function filter(){
+	tpl = "";
 
-		if(r && r != ""){
-			var reg = new RegExp(r, "gi");
-			switch(what){
-				case "s":
-					if(el.s.toLowerCase().indexOf(r.toLowerCase()) > -1){
-						tpl += li.format(el.c, el.s, el.p, el.n, el.w, el.e);
-						list.push(el);
-					}
-					break;
-				case "p":
-					if(el.p.toLowerCase().indexOf(r.toLowerCase()) > -1){
-						tpl += li.format(el.c, el.s, el.p.toString().high(reg), el.n, el.w, el.e);
-						list.push(el);
-					}
-					break;
-				case "n":
-					if(el.n.toString().indexOf(r) > -1){
-						tpl += li.format(el.c, el.s, el.p, el.n.toString().high(reg), el.w, el.e);
-						list.push(el);
-					}
-					break;
-				case "w":
-					if(el.w.toString().indexOf(r) > -1){ 
-						tpl += li.format(el.c, el.s, el.p, el.n, el.w.toString().high(reg), el.e);
-						list.push(el);
-					}
-					break;
-				case "e":
-					if(el.e.toString().indexOf(r) > -1){ 
-						tpl += li.format(el.c, el.s, el.p, el.n, el.w, el.e.join(",").high(reg));
-						list.push(el);
-					}
-					break;
-				default:
-					break;
-			}
-		} else {
-			tpl += li.format(el.c, el.s, el.p, el.n, el.w, el.e);
-			list = [];
-		}	
+	for (var i = 0, length = table.length; i < length; i++) {
+
+		el = table[i];
+			
+		var	qp = new RegExp(p.value, "gi"),
+			qn = new RegExp(n.value, "gi"),
+			qw = new RegExp(w.value, "gi"),
+			qe = new RegExp(e.value, "gi");
+
+		if(
+			(!s.value || el.s.toLowerCase().indexOf(s.value.toLowerCase()) > -1) &&
+			(!p.value || el.p.toLowerCase().indexOf(p.value.toLowerCase()) > -1) &&
+			(!n.value || el.n.toString().indexOf(n.value) > -1) &&
+			(!w.value || el.w.toString().indexOf(w.value) > -1) &&
+			(!e.value || el.e.toString().indexOf(e.value) > -1)
+		){
+			tpl += li.format(el.c, el.s, el.p.toString().high(qp), el.n.toString().high(qn), el.w.toString().high(qw), el.e.join(",").high(qe));
+			list.push(el);
+		}
 	}
 	pList.innerHTML = tpl;
 }
@@ -1044,4 +1023,4 @@ function filter(what,r,e){
 // RUN YOU CLEVER BOY
 // ===================
 
-filter();
+display();

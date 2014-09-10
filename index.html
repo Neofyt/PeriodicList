@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html manifest="plist.appcache">
 	<head>
 		<title>The Periodic list</title>
@@ -32,11 +33,11 @@
 
 				<ul>
 					<li class="legend">
-						<input class='symbol' placeholder="?" onkeyup="filter('s', this.value, event);" />
-						<input class='name' placeholder="Name" onkeyup="filter('p', this.value, event);" />
-						<input class='segment' placeholder="Number" onkeyup="filter('n', this.value, event);" />
-						<input class='segment' placeholder="Weight" onkeyup="filter('w', this.value, event);" />
-						<input class='segment' placeholder="Electrons" onkeyup="filter('e', this.value, event);" />
+						<input id="s" class='symbol' placeholder="?" onkeyup="filter();" />
+						<input id="p" class='name' placeholder="Name" onkeyup="filter();" />
+						<input id="n" class='segment' placeholder="Number" onkeyup="filter();" />
+						<input id="w" class='segment' placeholder="Weight" onkeyup="filter();" />
+						<input id="e" class='segment' placeholder="Electrons" onkeyup="filter();" />
 					</li>
 				</ul>
 

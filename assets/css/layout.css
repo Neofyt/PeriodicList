@@ -117,7 +117,7 @@ article {
 	margin-right: 30px;
 }
 
-#plist {
+#pList {
 	padding-top: 160px;
 	margin-bottom: 100px;
 	z-index: 1;
@@ -215,4 +215,5 @@ input {
 
 	input:not(.symbol):hover, input:not(.symbol):focus {
 		border-bottom: solid 1px rgb(22, 135, 226);
+		color: rgb(22, 135, 226);
 	}
